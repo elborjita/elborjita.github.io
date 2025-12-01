@@ -15,5 +15,9 @@
     <button type="button" onclick="document.getElementById('Imagen').src='./img/normal.png'">Cara Normal</button>
     <button type="button" onclick="document.getElementById('Imagen').src='./img/feliz.png'">Cara Feliz</button>
     <button type="button" onclick="document.getElementById('Imagen').src='./img/triste.webp'">Cara Triste</button>
+
+    <p>Ahora un botón que cambie el fondo de la página</p>
+    <button id="sol" type="button" onclick="document.body.style.backgroundColor = 'white' ; document.body.style.color = 'black' ; document.getElementById('sol').style.display = 'none' ; document.getElementById('luna').style.display = 'inline'"><img src="./img/sol.webp" alt="Fondo Claro" style="width: 100px; height: 100px;"></button>
+    <button id="luna" type="button" onclick="document.body.style.backgroundColor = 'black'; document.body.style.color = 'white' ; document.getElementById('luna').style.display = 'none' ; document.getElementById('sol').style.display = 'inline'"><img src="./img/luna.png" alt="Fondo Oscuro" style="width: 100px; height: 100px;"></button>
 </body>
 </html>
