@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios JavaScript</title>
     <style>
+        /* Los objetos de estos IDs salen inicialmente ocultos hasta que se pulse el botón correspondiente */
         #aparecer, #sol {
             display: none;
+        }
+        .container {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -16,37 +22,45 @@
     <button type="button" onclick="document.getElementById('Saludo').innerHTML = 'Hoy vamos a hacer ejercicios de JavaScript'">Púlsame!</button>
 
     <p>Ahora con distintos botones vamos a cambiar las imágenes</p>
-    <img id="Imagen" src="./img/normal.png" alt="Cara Normal" style="width: 200px;"><br>
+    <!--Hay 3 imagenes, se muestra solo la primera y cada una tiene su botón-->
+    <img id="Imagen" src="./img/normal.png" alt="Cara Normal" style="width: 200px;" loading="lazy"><br>
     <button type="button" onclick="document.getElementById('Imagen').src='./img/normal.png'">Cara Normal</button>
     <button type="button" onclick="document.getElementById('Imagen').src='./img/feliz.png'">Cara Feliz</button>
     <button type="button" onclick="document.getElementById('Imagen').src='./img/triste.webp'">Cara Triste</button>
 
     <p>Ahora un botón que cambie el fondo de la página</p>
+    <!--Efecto día y noche-->
     <button id="sol" type="button" onclick="
     document.body.style.backgroundColor = 'white' ; 
     document.body.style.color = 'black' ; 
     document.getElementById('sol').style.display = 'none' ; 
-    document.getElementById('luna').style.display = 'inline'
-    "><img src="./img/sol.webp" alt="Fondo Claro" style="width: 100px; height: 100px;"></button>
+    document.getElementById('luna').style.display = 'inline'">
+        <img src="./img/sol.webp" alt="Fondo Claro" style="width: 100px; height: 100px;">
+    </button>
     <button id="luna" type="button" onclick="
     document.body.style.backgroundColor = 'black'; 
     document.body.style.color = 'white' ; 
     document.getElementById('luna').style.display = 'none' ; 
-    document.getElementById('sol').style.display = 'inline'
-    "><img src="./img/luna.png" alt="Fondo Oscuro" style="width: 100px; height: 100px;"></button>
-
+    document.getElementById('sol').style.display = 'inline'">
+        <img src="./img/luna.png" alt="Fondo Oscuro" style="width: 100px; height: 100px;">
+    </button>
+    <!--Aparecer y desaparecer una imagen-->
     <p>Vamos a desaparecer y a aparecer una imágen</p>
-    <img id="imagen" src="./img/desaparecer.webp" alt="Desaparecer" style="width: 200px;"><br>
+    <div class="container">
+        <img id="imagen" src="./img/desaparecer.webp" alt="Desaparecer" style="width: 200px;" loading="lazy">
+    </div><br>
     <button id="desapeare" type="button" onclick="
     document.getElementById('imagen').style.display = 'none' ; 
     document.getElementById('desapeare').style.display = 'none' ; 
-    document.getElementById('aparecer').style.display = 'inline'
-    ">Desaparecer</button>
+    document.getElementById('aparecer').style.display = 'inline'">
+        Desaparecer el árbol
+    </button>
 
     <button id="aparecer" type="button" onclick="
     document.getElementById('imagen').style.display = 'inline' ; 
     document.getElementById('aparecer').style.display = 'none' ; 
-    document.getElementById('desapeare').style.display = 'inline'
-    ">Aparecer</button>
+    document.getElementById('desapeare').style.display = 'inline'">
+        Aparecer el árbol
+    </button>
 </body>
 </html>
