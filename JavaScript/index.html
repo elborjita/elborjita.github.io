@@ -90,6 +90,7 @@
         Manejen eventos: Reaccionen a las interacciones del usuario, como clics en botones o entradas de texto.<br>
         Ejemplo de manipulación del DOM<br>
         Imagina un documento HTML simple html:<br>
+    </p>
         <pre>
         &lt;!DOCTYPE html&gt;
         &lt;body&gt;
@@ -97,6 +98,7 @@
             &lt;h1 id="titulo"&gt;Hola, mundo&lt;/h1&gt;
         &lt;/body&gt;
         &lt;/html&gt;</pre>
+    <p>
         Usa el código con precaución.
 
         Con JavaScript, podrías manipular este documento a través del DOM de la siguiente manera:
@@ -137,7 +139,7 @@
     function cambiarEstilosGlobales() {
     // Selecciona TODOS los elementos <p> y los guarda en una lista (NodeList)
     const parrafos = document.querySelectorAll('p');
-    
+
     // Itera sobre cada elemento individualmente para aplicar los estilos
     parrafos.forEach(parrafo => {
     parrafo.style.color = 'blue';
