@@ -8,7 +8,6 @@
     <meta name="Description" content="Ejercicios de 2ºSMR">
     <meta name="Keywords" content="HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Python">
     <link rel="shortcut icon" href="./img/SMR.jpg"  type="image/x-icon">
-    <title>2ºSMR</title>
     <link rel="stylesheet" href="./css/js.css">
 
     <!-- Para WhatsApp y Telegram -->
@@ -73,53 +72,80 @@
     document.getElementById('aparecer').style.display = 'none' ; 
     document.getElementById('desapeare').style.display = 'inline'">
         Aparecer el árbol
-    </button>
+    </button><br><br>
 
-    <p>El <strong>DOM</strong> (siglas de Document Object Model, o Modelo de Objetos del Documento) es una interfaz de programación para documentos HTML y XML. Representa la estructura de una página web como un árbol de objetos, permitiendo a los lenguajes de programación, como JavaScript, acceder a los elementos del documento y manipular su contenido, estructura y estilo de forma dinámica.<br> 
-    <strong>¿Cómo funciona el DOM?</strong><br>
-    Cuando un navegador web carga una página HTML, crea internamente una representación en memoria de esa página. Esta representación es el DOM y sigue una estructura jerárquica de árbol.<br>
-    Documento: Es el nodo raíz del árbol, que representa toda la página web.<br>
-    Elementos: Cada etiqueta HTML <!--(como <body>, <h1>, <div>, <p>)--> se convierte en un objeto, o nodo, dentro del árbol.<br>
-    Atributos: Los atributos de las etiquetas (id, class, src, etc.) también se representan como nodos.<br>
-    Contenido de texto: El texto dentro de las etiquetas también es un nodo.<br>
-    <strong>¿Para qué sirve?</strong><br>
-    El DOM actúa como un puente entre la página web estática y el código de programación, permitiendo que los desarrolladores:<br>
-    Modifiquen el contenido: Actualicen textos o imágenes sin recargar la página.<br>
-    Cambien la estructura: Añadan, eliminen o reordenen elementos HTML.<br>
-    Alteran el estilo: Cambien las propiedades CSS para modificar la apariencia de los elementos.<br>
-    Manejen eventos: Reaccionen a las interacciones del usuario, como clics en botones o entradas de texto.<br>
-    Ejemplo de manipulación del DOM
-    Imagina un documento HTML simple html:</p>
-    <!--<!DOCTYPE html>
-    <body>
-    <html>
-    <h1 id="titulo">Hola, mundo</h1>
-    </body>
-    </html>
-    Usa el código con precaución.
+    <p>
+        El DOM (siglas de Document Object Model, o Modelo de Objetos del Documento) es una interfaz de programación para documentos HTML y XML. Representa la estructura de una página web como un árbol de objetos, permitiendo a los lenguajes de programación, como JavaScript, acceder a los elementos del documento y manipular su contenido, estructura y estilo de forma dinámica.<br> 
+        ¿Cómo funciona el DOM?<br>
+        Cuando un navegador web carga una página HTML, crea internamente una representación en memoria de esa página. Esta representación es el DOM y sigue una estructura jerárquica de árbol.<br>
+        Documento: Es el nodo raíz del árbol, que representa toda la página web.<br>
+        Elementos: Cada etiqueta HTML (como &lt;body&gt;, &lt;h1&gt;, &lt;div&gt;, &lt;p&gt;) se convierte en un objeto, o nodo, dentro del árbol.<br>
+        Atributos: Los atributos de las etiquetas (id, class, src, etc.) también se representan como nodos.<br>
+        Contenido de texto: El texto dentro de las etiquetas también es un nodo.<br>
+        ¿Para qué sirve?<br>
+        El DOM actúa como un puente entre la página web estática y el código de programación, permitiendo que los desarrolladores:<br>
+        Modifiquen el contenido: Actualicen textos o imágenes sin recargar la página.<br>
+        Cambien la estructura: Añadan, eliminen o reordenen elementos HTML.<br>
+        Alteran el estilo: Cambien las propiedades CSS para modificar la apariencia de los elementos.<br>
+        Manejen eventos: Reaccionen a las interacciones del usuario, como clics en botones o entradas de texto.<br>
+        Ejemplo de manipulación del DOM<br>
+        Imagina un documento HTML simple html:<br>
+        <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;body&gt;
+        &lt;html&gt;
+            &lt;h1 id="titulo"&gt;Hola, mundo&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+        Usa el código con precaución.
 
-    Con JavaScript, podrías manipular este documento a través del DOM de la siguiente manera:
-    javascript
-    // Acceder al elemento con el id "titulo"
-    const tituloElemento = document.getElementById('titulo');
+        Con JavaScript, podrías manipular este documento a través del DOM de la siguiente manera:
+        javascript
+        // Acceder al elemento con el id "titulo"
+        const tituloElemento = document.getElementById('titulo');
 
-    // Modificar el contenido del elemento
-    tituloElemento.textContent = '¡Hola, desde JavaScript!';
+        // Modificar el contenido del elemento
+        tituloElemento.textContent = '¡Hola, desde JavaScript!';
 
-    // Crear un nuevo párrafo
-    const nuevoParrafo = document.createElement('p');
-    nuevoParrafo.textContent = 'Este párrafo ha sido añadido con JavaScript.';
+        // Crear un nuevo párrafo
+        const nuevoParrafo = document.createElement('p');
+        nuevoParrafo.textContent = 'Este párrafo ha sido añadido con JavaScript.';
 
-    // Añadir el nuevo párrafo al cuerpo del documento
-    document.body.appendChild(nuevoParrafo);
-    Usa el código con precaución.
+        // Añadir el nuevo párrafo al cuerpo del documento
+        document.body.appendChild(nuevoParrafo);
+        Usa el código con precaución.
 
-    Este código permite modificar el contenido del <h1> y añadir un nuevo <p> sin necesidad de recargar la página, haciendo que el sitio web sea interactivo y  dinámico.
+        Este código permite modificar el contenido del &lt;h1&gt; y añadir un nuevo &lt;p&gt; sin necesidad de recargar la página, haciendo que el sitio web sea interactivo y  dinámico.
+        &lt;/p&gt;
+
+
+
+        &lt;/body&gt;
+        &lt;/html&gt;
     </p>
 
+    <!-- <button type="button" onclick="
+        document.getElementsByTagName('p').style.color = 'blue';
+        document.getElementsByTagName('p').style.fontSize = '20px';
+        document.getElementsByTagName('p').style.fontWeight = 'bold'; /*para poner el texto en negrita */
+        document.getElementsByTagName('p').style.fontStyle = 'italic'; /*para poner el texto en cursiva */
+    ">Cambiar aspecto del texto</button> -->
 
+    <button onclick="cambiarEstilosGlobales()">Cambia el aspecto de todos los párrafos</button>
 
-    </body>
-    </html>
-    </body>
-    </html> -->
+    <script>
+    function cambiarEstilosGlobales() {
+    // Selecciona TODOS los elementos <p> y los guarda en una lista (NodeList)
+    const parrafos = document.querySelectorAll('p');
+    
+    // Itera sobre cada elemento individualmente para aplicar los estilos
+    parrafos.forEach(parrafo => {
+    parrafo.style.color = 'blue';
+    parrafo.style.fontSize = '15px';
+    parrafo.style.fontWeight = 'bold';
+    parrafo.style.fontStyle = 'italic';
+    });
+    }
+    </script>
+</body>
+</html>
