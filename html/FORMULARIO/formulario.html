@@ -28,6 +28,9 @@
 </head>
 <body>
     <form>
+        <fieldset>
+            <legend>Datos Personales</legend>
+        
         <label for="nombre">Nombre:</label>
         <input class="input" type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required><br><br>
 
@@ -46,17 +49,29 @@
             <option value="prefer_not_say">Prefiero no decirlo</option>
         </select><br><br>
 
+        <label>Edad:</label>
+        <input type="number" id="edad" name="edad" min="18" max="100" required>
+        </fieldset><br>
+        <fieldset>
+            <legend>Otros Datos de Interés</legend>
+        
         <label for="color" >Color Favorito:</label>
         <input class="input" type="color" id="color" name="color"><br><br>
 
         <label for="phone_number" >Número de Teléfono:</label>
-        <input class="input" type="tel" id="phone_number" name="phone_number" placeholder="123-456-789"><br><br>
+        <input class="input" type="tel" id="phone_number" name="phone_number" placeholder="+34 123-456-789" pattern="\+[0-9]{1,3}[0-9]{9}" required><br><br>
+        
+        <label for="birthdate">Fecha de Nacimiento:</label>
+        <input class="input" type="date" id="birthdate" name="birthdate"><br>
 
-        <label for="terms">
-            <input type="checkbox" id="terms" name="terms" required> Acepto los términos y condiciones
-        </label><br><br>
-        <input type="submit" value="Enviar" class="button">
-        <input type="reset" value="Borrar" class="button">
+        <label for="bio">Biografía Corta:</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Escribe algo sobre ti..."></textarea>
+    </fieldset><br>
+    <label for="terms">
+        <input type="checkbox" id="terms" name="terms" required> Acepto los términos y condiciones
+    </label><br><br> 
+    <input type="submit" value="Enviar" class="button">
+    <input type="reset" value="Borrar" class="button">
     </form>
 </body>
 </html>
