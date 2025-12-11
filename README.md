@@ -1,3 +1,2 @@
-Esta es una página web hecha con los ejercicios de 2ºSMR
-
-Vas a ver ejercicios tanto con HTML , CSS y JavaScript
+Proyecto de Borja Lopez Jimenez
+2º SMR, APW
