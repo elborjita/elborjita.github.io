@@ -89,3 +89,15 @@ legend {
     text-align: center;
     width: 100%;
 }
+.button {
+    padding: 10px 20px;
+    color: white;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+.button:hover {
+    background: linear-gradient(to right, rgb(85, 193, 197), rgb(78, 143, 163));
+}

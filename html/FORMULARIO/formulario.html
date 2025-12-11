@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
 </head>
 <body>
     <h1>Formulario de Registro</h1>
-    <form action="#" method="post">
+    <form action="#" method="post" id="contacto">
         <h2>Información Personal</h2>
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required><br><br>
@@ -68,6 +68,8 @@
     </label><br><br> 
     <input type="submit" value="Enviar" class="button">
     <input type="reset" value="Borrar" class="button">
-    </form>
+    <button onclick="window.alert('Buenos días')" type="button" class="button">Saludo</button>
+    <button onclick="document.write('Buenos días')" type="button" class="button">Saludo con write</button>
+    </form><br>
 </body>
 </html>
