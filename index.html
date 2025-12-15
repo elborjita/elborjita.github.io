@@ -44,9 +44,12 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            object-fit: cover;
+            object-fit: cover; /* Esto hace que la foto se recorte bien en el círculo */
             border: 4px solid #333;
             margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 { margin: 0.5rem 0; font-size: 2rem; font-weight: 700; }
@@ -141,7 +144,7 @@
 
     <main class="profile-card">
         
-        <a href="https://cdn.impossibleimages.ai/wp-content/uploads/2023/04/16210033/VuSL9TqG811jWhz0JvE70TNAiUKMeAZCIdkHyPudUIBp0fwEdw-scaled.jpg" alt="Borja Lopez" class="profile-img">
+        <img src="https://cdn.impossibleimages.ai/wp-content/uploads/2023/04/16210033/VuSL9TqG811jWhz0JvE70TNAiUKMeAZCIdkHyPudUIBp0fwEdw-scaled.jpg" alt="Borja Lopez" class="profile-img">
         
         <h1>Borja Lopez Jimenez</h1>
         <p class="bio">Alumno del IES Donoso Cortés <br> Desarrollador Web en formación.</p>
