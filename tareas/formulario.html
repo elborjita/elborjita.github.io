@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Completo Final</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px; 
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        /* Estilos de inputs */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Estilos de los Botones */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .btn-submit {
+            background-color: #007BFF; /* Azul */
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-alert {
+            background-color: #6c757d; /* Gris */
+            color: white;
+        }
+        .btn-alert:hover {
+            background-color: #545b62;
+        }
+
+        .btn-write {
+            background-color: #28a745; /* Verde */
+            color: white;
+        }
+        .btn-write:hover {
+            background-color: #218838;
+        }
+
+        /* NUEVO ESTILO: Botón Capturar (Morado) */
+        .btn-capture {
+            background-color: #6f42c1;
+            color: white;
+        }
+        .btn-capture:hover {
+            background-color: #59359a;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registro Completo</h2>
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="Nombre">Nombre Completo:</label>
+                <input type="text" id="Nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 600 123 456" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje (Opcional):</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos" style="font-weight: normal;">Acepto los términos</label>
+            </div>
+
+            <button type="button" class="btn btn-alert" onclick="alert('hola buenos dias')">
+                Hola (Alerta) 👋
+            </button>
+
+            <button type="button" class="btn btn-write" onclick="document.write('<h1>Hola buenos dias</h1>')">
+                Saludo con Write ⚠️
+            </button>
+
+            <button type="button" class="btn btn-capture" onclick="var n = document.getElementById('Nombre').value; document.write('<h1>Nombre capturado: ' + n + '</h1>');">
+                Capturar Nombre 📸
+            </button>
+
+            <button type="submit" class="btn btn-submit">Enviar Registro</button>
+        </form>
+    </div>
+
+</body>
+</html>  

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa Interactivo de España</title>
+    <style>
+        /* Un poco de estilo para que se vea bien centrado */
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f0f0; font-family: sans-serif; }
+        h1 { text-align: center; }
+        img { border: 2px solid #333; box-shadow: 5px 5px 15px rgba(0,0,0,0.3); }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Haz clic en una Comunidad Autónoma</h1>
+        <img src="https://d-maps.com/m/europa/spain/espagne/espagne20.gif" alt="Mapa de España" usemap="#mapa-espana" width="100%">
+    </div>
+
+    <map name="mapa-espana">
+        <area target="_blank" alt="España" title="España" href="https://es.wikipedia.org/wiki/Galicia" coords="832,582,152,10" shape="rect">
+       
+    </map>
+
+</body>
+</html>
