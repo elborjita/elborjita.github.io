@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introducción a JavaScript</title>
+<style>
+.tamaño { width: 200px; height: auto; }
+.tamaño-temas { width: 70px; height: auto; }
+</style>
+</head>
+<body>
+<h1>Ejercicio JavaScript</h1>
+<button id="btnSaludo">Java</button>
+<p id="saludo">Hola buenos días</p>
+
+
+
+<img class="tamaño" id="neutral" src="https://i.pinimg.com/736x/65/d4/66/65d46606c534fa8775563f3ac9a0d3e7.jpg" alt="neutral"> <br>
+<img class="tamaño" id="sonrie" src="https://pbs.twimg.com/media/FwvTYVUWYAIZYWg.jpg" hidden>
+<img class="tamaño" id="triste" src="https://media.tenor.com/SyYcgebB7S4AAAAe/sad-speed-ishowspeed.png" alt="triste" hidden>
+
+
+<button id="btnSonreir">Sonreir</button>
+<button id="btnTriste">Triste</button>
+<button id="btnNeutral">Neutral</button>
+<br><br>
+<button id="btnNoche">
+<img id="luna" class="tamaño-temas" src="https://images.emojiterra.com/google/android-nougat/512px/1f319.png" alt="luna">
+</button>
+<button id="btnDia">
+<img id="sol" class="tamaño-temas" src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="sol">
+</button>
+<br><br>
+<p>Cuando hagas clic al botón de abajo el arbol desaparece</p>
+<button id="btnArbol">Quitar arbol de navidad</button>
+<img id="arbol" class="tamaño" src="https://cdn-icons-png.flaticon.com/512/3703/3703734.png" alt="árbol" style="display: block;">
+<br><br>
+<button id="btnEstiloP">Cambiar estilo de todos los párrafos</button>
+
+
+<script>
+// Saludo
+document.getElementById('btnSaludo').addEventListener('click', () => {
+document.getElementById('saludo').innerHTML = '¡Hola, JavaScript!';
+});
+
+
+// Cambio de caras
+document.getElementById('btnSonreir').addEventListener('click', () => {
+document.getElementById('neutral').hidden = true;
+document.getElementById('sonrie').hidden = false;
+document.getElementById('triste').hidden = true;
+});
+
+
+document.getElementById('btnTriste').addEventListener('click', () => {
+document.getElementById('neutral').hidden = true;
+document.getElementById('sonrie').hidden = true;
+document.getElementById('triste').hidden = false;
+});
+
+
+document.getElementById('btnNeutral').addEventListener('click', () => {
+document.getElementById('neutral').hidden = false;
+document.getElementById('sonrie').hidden = true;
+document.getElementById('triste').hidden = true;
+});
+
+
+// Día / noche
+document.getElementById('btnNoche').addEventListener('click', () => {
+document.body.style.backgroundColor = 'rgb(57, 57, 57)';
+document.body.style.color = 'white';
+});
+
+
+document.getElementById('btnDia').addEventListener('click', () => {
+document.body.style.backgroundColor = 'white';
+document.body.style.color = 'black';
+});
+
+
+// Mostrar / ocultar árbol
+document.getElementById('btnArbol').addEventListener('click', function() {
+const arbol = document.getElementById('arbol');
+arbol.style.display = arbol.style.display === 'none' ? 'block' : 'none';
+this.innerHTML = arbol.style.display === 'none' ? 'Mostrar árbol' : 'Quitar árbol';
+});
+
+
+// Cambiar estilo de todos los párrafos
+document.getElementById('btnEstiloP').addEventListener('click', () => {
+const ps = document.getElementsByTagName('p');
+for(let i=0; i<ps.length; i++) {
+ps[i].style.color = 'blue';
+ps[i].style.fontSize = '15px';
+ps[i].style.fontWeight = 'bold';
+}
+});
+</script>
+</body>
+</html>
